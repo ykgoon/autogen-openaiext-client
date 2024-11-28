@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "autogen_openaiext_client"
+version = "0.0.1.dev1"
+dependencies = [
+    "autogen-core>=0.4.0.dev6,<0.5", # TODO: remove dev tag after release
+]
+requires-python = ">=3.10, <3.13"
+description = "This is an autogen>=0.4 extension for integrating external models through the OpenAI API."
+readme = "README.md"
+license = {file = "LICENSE"}
+keywords = ["autogen", "agent", "AI"]
+classifiers = [
+  "Programming Language :: Python :: 3"
+]

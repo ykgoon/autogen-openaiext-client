@@ -1,0 +1,8 @@
+*.pyc
+.env
+.ruff_cache/
+.vscode/
+.code/
+.DS_Store
+__pycache__/
+.pytest_cache/

@@ -151,10 +151,10 @@ class GeminiInfo(ExtInfo):
 
     _MODEL_CAPABILITIES: Dict[str, ModelCapabilities] = {
         "gemini-1.5-flash": {
-            "vision": False,
+            "vision": True,
             "function_calling": True,
             "json_output": True,
         }
     }
 
-    _MODEL_TOKEN_LIMITS: Dict[str, int] = {"gemini-1.5-flash": 4096}
+    _MODEL_TOKEN_LIMITS: Dict[str, int] = {"gemini-1.5-flash": 1e6}

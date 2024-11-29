@@ -6,11 +6,18 @@ This Autogen client is to help interface with non-OpenAI LLMs through the OpenAI
 
 Currently in development.
 
-Timeline:
+Current status:
+
+1. Basic client works
+2. Install [Magentic-One](https://github.com/microsoft/autogen/tree/main/python/packages/autogen-magentic-one) and run `python examples/magentic_coder_example.py` for a sample usage with other autogen-based frameworks.
+3. Gemini-based tool calling through the API has issues with multiple tools.
+
+Next steps:
 
 1. Add tests to make sure the client works
-2. Add samples to show how to use the client
-3. Update documentation for installation and usage
+2. Collect other LLMs data and support easy initializations
+3. Add samples to show how to use the client
+4. Update documentation for installation and usage
 
 # Disclaimer
 

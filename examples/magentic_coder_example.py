@@ -54,7 +54,11 @@ async def main() -> None:
         await Executor.register(
             runtime,
             "Executor",
-            lambda: Executor("A agent for executing code", executor=code_executor, confirm_execution=confirm_code),
+            lambda: Executor(
+                "A agent for executing code",
+                executor=code_executor,
+                confirm_execution=confirm_code,
+            ),
         )
         executor = AgentProxy(AgentId("Executor", "default"), runtime)
 

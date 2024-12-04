@@ -12,7 +12,7 @@ requires-python = ">=3.10, <3.13"
 description = "This is an autogen>=0.4 extension for integrating external models through the OpenAI API."
 readme = "README.md"
 license = {file = "LICENSE"}
-keywords = ["autogen", "agent", "AI"]
+keywords = ["autogen", "agent"]
 classifiers = [
   "Programming Language :: Python :: 3"
 ]

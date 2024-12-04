@@ -71,7 +71,7 @@ from asyncio import Task
 logger = logging.getLogger(EVENT_LOGGER_NAME)
 trace_logger = logging.getLogger(TRACE_LOGGER_NAME)
 
-from .info import GeminiInfo
+from autogen_openaiext_client.info import GeminiInfo, TogetherAIInfo, GroqInfo
 
 
 class BaseOpenAIExtChatCompletionClient(BaseOpenAIChatCompletionClient):
@@ -705,3 +705,33 @@ class OpenAIExtChatCompletionClient(BaseOpenAIExtChatCompletionClient):
     def __setstate__(self, state: Dict[str, Any]) -> None:
         self.__dict__.update(state)
         self._client = _openai_client_from_config(state["_raw_config"])
+
+
+class GeminiChatCompletionClient(OpenAIExtChatCompletionClient):
+    def __init__(
+        self,
+        model_info=GeminiInfo,
+        base_url=GeminiInfo.BASE_URL,
+        **kwargs: Unpack[OpenAIExtClientConfiguration],
+    ):
+        super().__init__(model_info=model_info, base_url=base_url, **kwargs)
+
+
+class TogetherAIChatCompletionClient(OpenAIExtChatCompletionClient):
+    def __init__(
+        self,
+        model_info=TogetherAIInfo,
+        base_url=TogetherAIInfo.BASE_URL,
+        **kwargs: Unpack[OpenAIExtClientConfiguration],
+    ):
+        super().__init__(model_info=model_info, base_url=base_url, **kwargs)
+
+
+class GroqChatCompletionClient(OpenAIExtChatCompletionClient):
+    def __init__(
+        self,
+        model_info=GroqInfo,
+        base_url=GroqInfo.BASE_URL,
+        **kwargs: Unpack[OpenAIExtClientConfiguration],
+    ):
+        super().__init__(model_info=model_info, base_url=base_url, **kwargs)

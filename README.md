@@ -2,22 +2,34 @@
 
 This Autogen client is to help interface with non-OpenAI LLMs through the OpenAI API.
 
-# Status
+# Usage
 
-Currently in development.
+```python
+from autogen_openaiext_client import GeminiChatCompletionClient
+import asyncio
 
-Current status:
+# Initialize the client
+client = GeminiChatCompletionClient(model="gemini-1.5-flash", api_key=os.environ["GEMINI_API_KEY"])
 
-1. Basic client works
-2. Install [Magentic-One](https://github.com/microsoft/autogen/tree/main/python/packages/autogen-magentic-one) and run `python examples/magentic_coder_example.py` for a sample usage with other autogen-based frameworks.
-3. Gemini-based tool calling through the API has issues with multiple tools.
+# use the client like any other autogen client. For example:
+result = asyncio.run(
+    client.create(
+        [UserMessage(content="What is the capital of France?", source="user")]
+    )
+)
+print(result.content)
+# Paris
+```
 
-Next steps:
+Currently, `Gemini`, `TogetherAI` and `Groq` clients are supported through the `GeminiChatCompletionClient`, `TogetherAIChatCompletionClient` and `GroqChatCompletionClient` respectively.
 
-1. Add tests to make sure the client works
-2. Collect other LLMs data and support easy initializations
-3. Add samples to show how to use the client
-4. Update documentation for installation and usage
+Install [Magentic-One](https://github.com/microsoft/autogen/tree/main/python/packages/autogen-magentic-one) and run `python examples/magentic_coder_example.py` for a sample usage with other autogen-based frameworks.
+
+
+
+# Known Issues
+
+1. Tool calling in Gemini through OpenAI API runs into issues.
 
 # Disclaimer
 

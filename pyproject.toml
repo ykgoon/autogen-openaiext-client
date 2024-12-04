@@ -16,3 +16,6 @@ keywords = ["autogen", "agent"]
 classifiers = [
   "Programming Language :: Python :: 3"
 ]
+authors = [
+  { name = "Vaibhav Balloli", email = "balloli.vb@gmail.com" }
+]

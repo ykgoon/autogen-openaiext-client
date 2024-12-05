@@ -2,6 +2,10 @@
 
 This Autogen client is to help interface with non-OpenAI LLMs through the OpenAI API.
 
+# Install
+
+`pip install autogen-openaiext-client`
+
 # Usage
 
 ```python

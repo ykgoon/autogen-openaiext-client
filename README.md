@@ -2,6 +2,8 @@
 
 This Autogen client is to help interface with non-OpenAI LLMs through the OpenAI API.
 
+> Archiving this repository since the Autogen v0.4 supports the non-OpenAI LLMs within the `autogen_ext` package itself.
+
 # Usage
 
 ```python

@@ -1,12 +1,12 @@
 from typing import Dict
 
-from autogen_core.components.models import ModelCapabilities
+from autogen_core.models import ModelInfo
 
 
 class ExtInfo:
     _MODEL_POINTERS = {}
 
-    _MODEL_CAPABILITIES: Dict[str, ModelCapabilities] = {}
+    _MODEL_CAPABILITIES: Dict[str, ModelInfo] = {}
 
     _MODEL_TOKEN_LIMITS: Dict[str, int] = {}
 
@@ -19,7 +19,7 @@ class ExtInfo:
         return model
 
     @staticmethod
-    def get_capabilities(model: str) -> ModelCapabilities:
+    def get_capabilities(model: str) -> ModelInfo:
         resolved_model = GeminiInfo.resolve_model(model)
         return GeminiInfo._MODEL_CAPABILITIES[resolved_model]
 
@@ -29,22 +29,26 @@ class ExtInfo:
         return GeminiInfo._MODEL_TOKEN_LIMITS[resolved_model]
 
     def _add_model(
-        self, model_name: str, model_capabilities: ModelCapabilities, token_limit: int
+        self, model_name: str, model_capabilities: ModelInfo, token_limit: int
     ):
         self._MODEL_CAPABILITIES[model_name] = model_capabilities
         self._MODEL_TOKEN_LIMITS[model_name] = token_limit
 
     @classmethod
     def add_model(
-        cls, model_name: str, model_capabilities: ModelCapabilities, token_limit: int
+        cls, model_name: str, model_capabilities: ModelInfo, token_limit: int
     ):
         cls._add_model(model_name, model_capabilities, token_limit)
 
+    @classmethod
+    def get_info(cls, model: str) -> ModelInfo:
+        resolved_model = cls.resolve_model(model)
+        return cls._MODEL_CAPABILITIES[resolved_model]
 
 class GeminiInfo(ExtInfo):
     _MODEL_POINTERS = {"gemini-1.5-flash": "gemini-1.5-flash"}
 
-    _MODEL_CAPABILITIES: Dict[str, ModelCapabilities] = {
+    _MODEL_CAPABILITIES: Dict[str, ModelInfo] = {
         "gemini-1.5-flash": {
             "vision": True,
             "function_calling": True,
@@ -115,7 +119,7 @@ class TogetherAIInfo(ExtInfo):
         "stable-diffusion-xl-base-1.0": "stable-diffusion-xl-base-1.0",
     }
 
-    _MODEL_CAPABILITIES: Dict[str, ModelCapabilities] = {
+    _MODEL_CAPABILITIES: Dict[str, ModelInfo] = {
         "llama-3.1-8b-instruct-turbo": {
             "vision": False,
             "function_calling": False,
@@ -420,7 +424,7 @@ class GroqInfo(ExtInfo):
         "mixtral-8x7b-32768": "mixtral-8x7b-32768",
     }
 
-    _MODEL_CAPABILITIES: Dict[str, ModelCapabilities] = {
+    _MODEL_CAPABILITIES: Dict[str, ModelInfo] = {
         "distil-whisper-large-v3-en": {
             "vision": False,
             "function_calling": False,

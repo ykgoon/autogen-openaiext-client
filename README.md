@@ -1,8 +1,12 @@
 # autogen-openaiext-client
 
-This Autogen client is to help interface with non-OpenAI LLMs through the OpenAI API.
+This Autogen client is to help interface *quickly* with non-OpenAI LLMs through the OpenAI API.
 
-> Archiving this repository since the Autogen v0.4 supports the non-OpenAI LLMs within the `autogen_ext` package itself.
+See [here](https://microsoft.github.io/autogen/stable/reference/python/autogen_ext.models.openai.html#autogen_ext.models.openai.OpenAIChatCompletionClient) for more information on using with custom LLMs.
+
+> This repository simply include clients you can use to initialize your LLMs easily - since the Autogen >v0.4 supports the non-OpenAI LLMs within the `autogen_ext` package itself with a really nice and clean changes from [jackgerrits](https://github.com/jackgerrits) [here](https://github.com/microsoft/autogen/pull/4856).
+
+
 =======
 # Install
 

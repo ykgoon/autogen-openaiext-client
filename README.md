@@ -33,13 +33,14 @@ print(result.content)
 
 Currently, `Gemini`, `TogetherAI` and `Groq` clients are supported through the `GeminiChatCompletionClient`, `TogetherAIChatCompletionClient` and `GroqChatCompletionClient` respectively.
 
-Install [Magentic-One](https://github.com/microsoft/autogen/tree/main/python/packages/autogen-magentic-one) and run `python examples/magentic_coder_example.py` for a sample usage with other autogen-based frameworks.
 
+# Demo
 
+[![YouTube](http://i.ytimg.com/vi/HjAXCcJPa9I/hqdefault.jpg)](https://www.youtube.com/watch?v=HjAXCcJPa9I)
 
-# Known Issues
+[Magnetic-One](https://github.com/microsoft/autogen/tree/main/python/packages/autogen-magentic-one) example using Gemini client. 
 
-1. Tool calling in Gemini through OpenAI API runs into issues.
+Install [Magentic-One](https://github.com/microsoft/autogen/tree/main/python/packages/autogen-magentic-one) and run `python examples/magentic_one_example.py --hil_mode --logs_dir ./logs` for a complete run.
 
 # Contributing
 

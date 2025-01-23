@@ -41,6 +41,13 @@ Install [Magentic-One](https://github.com/microsoft/autogen/tree/main/python/pac
 
 1. Tool calling in Gemini through OpenAI API runs into issues.
 
+# Contributing
+
+1. Adding a new model to existing external providers
+   1. For example, adding a new model to `GeminiChatCompletionClient` includes modifying the `GeminiInfo` class in `info.py` and adding the new model to `_MODEL_CAPABILITIES` and `_MODEL_TOKEN_LIMITS` dictionaries.
+2. Adding a new external provider
+   1. Add a new client class in `client.py`, relevant `ProviderInfo` class in `info.py` and add it to `__init__.py` for easy import.
+
 # Disclaimer
 
 This is a community project for Autogen. Feel free to contribute via issues and PRs and I will try my best to get to it every 3 days.

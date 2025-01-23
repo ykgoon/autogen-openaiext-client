@@ -45,6 +45,7 @@ class ExtInfo:
         resolved_model = cls.resolve_model(model)
         return cls._MODEL_CAPABILITIES[resolved_model]
 
+
 class GeminiInfo(ExtInfo):
     _MODEL_POINTERS = {"gemini-1.5-flash": "gemini-1.5-flash"}
 
@@ -217,7 +218,7 @@ class TogetherAIInfo(ExtInfo):
             "vision": False,
             "function_calling": False,
             "json_output": False,
-            "family": "google-gemma"
+            "family": "google-gemma",
         },
         "llama-2-13b-chat-hf": {
             "vision": False,
@@ -404,79 +405,79 @@ class GroqInfo(ExtInfo):
             "vision": False,
             "function_calling": False,
             "json_output": False,
-            "family": "meta-llama3"
+            "family": "meta-llama3",
         },
         "llama3-groq-8b-8192-tool-use-preview": {
             "vision": False,
             "function_calling": False,
             "json_output": False,
-            "family": "meta-llama3"
+            "family": "meta-llama3",
         },
         "llama-3.1-70b-versatile": {
             "vision": False,
             "function_calling": False,
             "json_output": False,
-            "family": "meta-llama3.1"
+            "family": "meta-llama3.1",
         },
         "llama-3.1-70b-specdec": {
             "vision": False,
             "function_calling": False,
             "json_output": False,
-            "family": "meta-llama3.1"
+            "family": "meta-llama3.1",
         },
         "llama-3.1-8b-instant": {
             "vision": False,
             "function_calling": False,
             "json_output": False,
-            "family": "meta-llama3.1"
+            "family": "meta-llama3.1",
         },
         "llama-3.2-1b-preview": {
             "vision": False,
             "function_calling": False,
             "json_output": False,
-            "family": "meta-llama3.2"
+            "family": "meta-llama3.2",
         },
         "llama-3.2-3b-preview": {
             "vision": False,
             "function_calling": False,
             "json_output": False,
-            "family": "meta-llama3.2"
+            "family": "meta-llama3.2",
         },
         "llama-3.2-11b-vision-preview": {
             "vision": False,
             "function_calling": False,
             "json_output": False,
-            "family": "meta-llama3.2"
+            "family": "meta-llama3.2",
         },
         "llama-3.2-90b-vision-preview": {
             "vision": False,
             "function_calling": False,
             "json_output": False,
-            "family": "meta-llama3.2"
+            "family": "meta-llama3.2",
         },
         "llama-guard-3-8b": {
             "vision": False,
             "function_calling": False,
             "json_output": False,
-            "family": "meta-llama3"
+            "family": "meta-llama3",
         },
         "llama3-70b-8192": {
             "vision": False,
             "function_calling": False,
             "json_output": False,
-            "family": "meta-llama3"
+            "family": "meta-llama3",
         },
         "llama3-8b-8192": {
             "vision": False,
             "function_calling": False,
             "json_output": False,
-            "family": "meta-llama3"
+            "family": "meta-llama3",
         },
         "mixtral-8x7b-32768": {
             "vision": False,
             "function_calling": False,
             "json_output": False,
-            "family": "misitral-mixtral"
+            "family": "misitral-mixtral",
         },
     }
 

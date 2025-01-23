@@ -10,19 +10,17 @@ class GeminiChatCompletionClient(OpenAIChatCompletionClient):
     def __init__(self, **kwargs):
         assert "model" in kwargs, "model is required"
         model = kwargs["model"]
-    
-        if not "model_capabilities" in kwargs:
-            model_capabilities = GeminiInfo.get_capabilities(model)
-            kwargs["model_capabilities"] = model_capabilities
 
-        if not "model_info" in kwargs:
+        if "model_info" not in kwargs:
+            assert "model_capabilities" not in kwargs, "model_info and model_capabilities cannot be provided together"
             model_info = GeminiInfo.get_info(model)
             kwargs["model_info"] = ModelInfo(**model_info)
 
         model_info: Optional[ModelInfo] = None
         if "model_info" in kwargs:
             model_info = kwargs["model_info"]
-        
+
+        kwargs['base_url'] = GeminiInfo.BASE_URL
 
         super().__init__(**kwargs)
 
@@ -33,11 +31,8 @@ class GroqChatCompletionClient(OpenAIChatCompletionClient):
         assert "model" in kwargs, "model is required"
         model = kwargs["model"]
     
-        if not "model_capabilities" in kwargs:
-            model_capabilities = GroqInfo.get_capabilities(model)
-            kwargs["model_capabilities"] = model_capabilities
-
-        if not "model_info" in kwargs:
+        if "model_info" not in kwargs:
+            assert "model_capabilities" not in kwargs, "model_info and model_capabilities cannot be provided together"
             model_info = GroqInfo.get_info(model)
             kwargs["model_info"] = ModelInfo(**model_info)
 
@@ -45,7 +40,8 @@ class GroqChatCompletionClient(OpenAIChatCompletionClient):
         if "model_info" in kwargs:
             model_info = kwargs["model_info"]
         
-
+        kwargs['base_url'] = GroqInfo.BASE_URL
+        
         super().__init__(**kwargs)
 
 
@@ -55,11 +51,8 @@ class TogetherAIChatCompletionClient(OpenAIChatCompletionClient):
         assert "model" in kwargs, "model is required"
         model = kwargs["model"]
     
-        if not "model_capabilities" in kwargs:
-            model_capabilities = TogetherAIInfo.get_capabilities(model)
-            kwargs["model_capabilities"] = model_capabilities
-
-        if not "model_info" in kwargs:
+        if "model_info" not in kwargs:
+            assert "model_capabilities" not in kwargs, "model_info and model_capabilities cannot be provided together"
             model_info = TogetherAIInfo.get_info(model)
             kwargs["model_info"] = ModelInfo(**model_info)
 
@@ -67,6 +60,7 @@ class TogetherAIChatCompletionClient(OpenAIChatCompletionClient):
         if "model_info" in kwargs:
             model_info = kwargs["model_info"]
         
+        kwargs['base_url'] = TogetherAIInfo.BASE_URL
 
         super().__init__(**kwargs)
         

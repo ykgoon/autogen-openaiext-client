@@ -53,11 +53,13 @@ class GeminiInfo(ExtInfo):
             "vision": True,
             "function_calling": True,
             "json_output": True,
+            "family": "gemini",
         },
         "gemini-1.5-pro": {
             "vision": True,
             "function_calling": True,
             "json_output": True,
+            "family": "gemini",
         },
     }
 
@@ -90,32 +92,21 @@ class TogetherAIInfo(ExtInfo):
         "dbrx-instruct": "dbrx-instruct",
         "deepseek-llm-67b-chat": "deepseek-llm-67b-chat",
         "gemma-2b-it": "gemma-2b-it",
-        "mythomax-l2-13b": "mythom",
         "llama-2-13b-chat-hf": "llama-2-13b-chat-hf",
         "mistral-7b-instruct": "mistral-7b-instruct",
         "mistral-7b-instruct-v0.2": "mistral-7b-instruct-v0.2",
         "mistral-7b-instruct-v0.3": "mistral-7b-instruct-v0.3",
         "mixtral-8x7b-instruct": "mixtral-8x7b-instruct",
         "mixtral-8x22b-instruct": "mixtral-8x22b-instruct",
-        "nous-hermes-2-mixtral-8x7b-dpo": "nous-hermes-2-mixtral-8x7b-dpo",
         "qwen-2.5-7b-instruct-turbo": "qwen-2.5-7b-instruct-turbo",
         "qwen-2.5-72b-instruct-turbo": "qwen-2.5-72b-instruct-turbo",
         "qwen-2-instruct": "qwen-2-instruct",
-        "upstage-solar-instruct-v1": "upstage-solar-instruct-v1",
         "llama-vision-free": "llama-vision-free",
         "llama-3.2-11b-vision-instruct-turbo": "llama-3.2-11b-vision-instruct-turbo",
         "llama-3.2-90b-vision-instruct-turbo": "llama-3.2-90b-vision-instruct-turbo",
         "llama-2-70b-hf": "llama-2-70b-hf",
         "mistral-7b": "mistral-7b",
         "mixtral-8x7b": "mixtral-8x7b",
-        "flux-1-schnell-free": "flux-1-schnell-free",
-        "flux-1-schnell": "flux-1-schnell",
-        "flux-1-dev": "flux-1-dev",
-        "flux-1-canny": "flux-1-canny",
-        "flux-1-depth": "flux-1-depth",
-        "flux-1-redux": "flux-1-redux",
-        "flux-1.1-pro": "flux-1.1-pro",
-        "flux-1-pro": "flux-1-pro",
         "stable-diffusion-xl-base-1.0": "stable-diffusion-xl-base-1.0",
     }
 
@@ -124,226 +115,199 @@ class TogetherAIInfo(ExtInfo):
             "vision": False,
             "function_calling": False,
             "json_output": False,
+            "family": "meta-llama3.1",
         },
         "llama-3.1-70b-instruct-turbo": {
             "vision": False,
             "function_calling": False,
             "json_output": False,
+            "family": "meta-llama3.1",
         },
         "llama-3.1-405b-instruct-turbo": {
             "vision": False,
             "function_calling": False,
             "json_output": False,
+            "family": "meta-llama3.1",
         },
         "llama-3-8b-instruct-turbo": {
             "vision": False,
             "function_calling": False,
             "json_output": False,
+            "family": "meta-llama3",
         },
         "llama-3-70b-instruct-turbo": {
             "vision": False,
             "function_calling": False,
             "json_output": False,
+            "family": "meta-llama3",
         },
         "llama-3.2-3b-instruct-turbo": {
             "vision": False,
             "function_calling": False,
             "json_output": False,
+            "family": "meta-llama3.2",
         },
         "llama-3-8b-instruct-lite": {
             "vision": False,
             "function_calling": False,
             "json_output": False,
+            "family": "meta-llama3",
         },
         "llama-3-70b-instruct-lite": {
             "vision": False,
             "function_calling": False,
             "json_output": False,
+            "family": "meta-llama3",
         },
         "llama-3-8b-instruct-reference": {
             "vision": False,
             "function_calling": False,
             "json_output": False,
+            "family": "meta-llama3",
         },
         "llama-3-70b-instruct-reference": {
             "vision": False,
             "function_calling": False,
             "json_output": False,
+            "family": "meta-llama3",
         },
         "llama-3.1-nemotron-70b": {
             "vision": False,
             "function_calling": False,
             "json_output": False,
+            "family": "meta-llama3.1",
         },
         "qwen-2.5-coder-32b-instruct": {
             "vision": False,
             "function_calling": False,
             "json_output": False,
+            "family": "alibaba-qwen",
         },
         "qwen-32b-preview": {
             "vision": False,
             "function_calling": False,
             "json_output": False,
-        },
-        "wizardlm-2-8x22b": {
-            "vision": False,
-            "function_calling": False,
-            "json_output": False,
+            "family": "alibaba-qwen",
         },
         "gemma-2-27b": {
             "vision": False,
             "function_calling": False,
             "json_output": False,
+            "family": "google-gemma",
         },
         "gemma-2-9b": {
             "vision": False,
             "function_calling": False,
             "json_output": False,
+            "family": "google-gemma",
         },
         "dbrx-instruct": {
             "vision": False,
             "function_calling": False,
             "json_output": False,
+            "family": "dbrx",
         },
         "deepseek-llm-67b-chat": {
             "vision": False,
             "function_calling": False,
             "json_output": False,
+            "family": "deepseek",
         },
         "gemma-2b-it": {
             "vision": False,
             "function_calling": False,
             "json_output": False,
-        },
-        "mythomax-l2-13b": {
-            "vision": False,
-            "function_calling": False,
-            "json_output": False,
+            "family": "google-gemma"
         },
         "llama-2-13b-chat-hf": {
             "vision": False,
             "function_calling": False,
             "json_output": False,
+            "family": "meta-llama2",
         },
         "mistral-7b-instruct": {
             "vision": False,
             "function_calling": False,
             "json_output": False,
+            "family": "mistral",
         },
         "mistral-7b-instruct-v0.2": {
             "vision": False,
             "function_calling": False,
             "json_output": False,
+            "family": "mistral",
         },
         "mistral-7b-instruct-v0.3": {
             "vision": False,
             "function_calling": False,
             "json_output": False,
+            "family": "mistral",
         },
         "mixtral-8x7b-instruct": {
             "vision": False,
             "function_calling": False,
             "json_output": False,
+            "family": "mixtral",
         },
         "mixtral-8x22b-instruct": {
             "vision": False,
             "function_calling": False,
             "json_output": False,
-        },
-        "nous-hermes-2-mixtral-8x7b-dpo": {
-            "vision": False,
-            "function_calling": False,
-            "json_output": False,
+            "family": "mixtral",
         },
         "qwen-2.5-7b-instruct-turbo": {
             "vision": False,
             "function_calling": False,
             "json_output": False,
+            "family": "alibaba-qwen",
         },
         "qwen-2.5-72b-instruct-turbo": {
             "vision": False,
             "function_calling": False,
             "json_output": False,
+            "family": "alibaba-qwen",
         },
         "qwen-2-instruct": {
             "vision": False,
             "function_calling": False,
             "json_output": False,
-        },
-        "upstage-solar-instruct-v1": {
-            "vision": False,
-            "function_calling": False,
-            "json_output": False,
+            "family": "alibaba-qwen",
         },
         "llama-vision-free": {
             "vision": True,
             "function_calling": False,
             "json_output": False,
+            "family": "meta-llama",
         },
         "llama-3.2-11b-vision-instruct-turbo": {
             "vision": True,
             "function_calling": False,
             "json_output": False,
+            "family": "meta-llama3.2",
         },
         "llama-3.2-90b-vision-instruct-turbo": {
             "vision": True,
             "function_calling": False,
             "json_output": False,
+            "family": "meta-llama3.2",
         },
         "llama-2-70b-hf": {
             "vision": False,
             "function_calling": False,
             "json_output": False,
+            "family": "meta-llama2",
         },
         "mistral-7b": {
             "vision": False,
             "function_calling": False,
             "json_output": False,
+            "family": "mistral",
         },
         "mixtral-8x7b": {
             "vision": False,
             "function_calling": False,
             "json_output": False,
-        },
-        "flux-1-schnell-free": {
-            "vision": False,
-            "function_calling": False,
-            "json_output": False,
-        },
-        "flux-1-schnell": {
-            "vision": False,
-            "function_calling": False,
-            "json_output": False,
-        },
-        "flux-1-dev": {
-            "vision": False,
-            "function_calling": False,
-            "json_output": False,
-        },
-        "flux-1-canny": {
-            "vision": False,
-            "function_calling": False,
-            "json_output": False,
-        },
-        "flux-1-depth": {
-            "vision": False,
-            "function_calling": False,
-            "json_output": False,
-        },
-        "flux-1-redux": {
-            "vision": False,
-            "function_calling": False,
-            "json_output": False,
-        },
-        "flux-1.1-pro": {
-            "vision": False,
-            "function_calling": False,
-            "json_output": False,
-        },
-        "flux-1-pro": {
-            "vision": False,
-            "function_calling": False,
-            "json_output": False,
+            "family": "mistral-mixtral",
         },
         "stable-diffusion-xl-base-1.0": {
             "vision": True,
@@ -408,7 +372,6 @@ class GroqInfo(ExtInfo):
     _MODEL_POINTERS = {
         "distil-whisper-large-v3-en": "distil-whisper-large-v3-en",
         "gemma2-9b-it": "gemma2-9b-it",
-        "gemma-7b-it": "gemma-7b-it",
         "llama3-groq-70b-8192-tool-use-preview": "llama3-groq-70b-8192-tool-use-preview",
         "llama3-groq-8b-8192-tool-use-preview": "llama3-groq-8b-8192-tool-use-preview",
         "llama-3.1-70b-versatile": "llama-3.1-70b-versatile",
@@ -429,87 +392,96 @@ class GroqInfo(ExtInfo):
             "vision": False,
             "function_calling": False,
             "json_output": False,
+            "family": "openai-whisper",
         },
         "gemma2-9b-it": {
             "vision": False,
             "function_calling": False,
             "json_output": False,
-        },
-        "gemma-7b-it": {
-            "vision": False,
-            "function_calling": False,
-            "json_output": False,
+            "family": "google-gemma",
         },
         "llama3-groq-70b-8192-tool-use-preview": {
             "vision": False,
             "function_calling": False,
             "json_output": False,
+            "family": "meta-llama3"
         },
         "llama3-groq-8b-8192-tool-use-preview": {
             "vision": False,
             "function_calling": False,
             "json_output": False,
+            "family": "meta-llama3"
         },
         "llama-3.1-70b-versatile": {
             "vision": False,
             "function_calling": False,
             "json_output": False,
+            "family": "meta-llama3.1"
         },
         "llama-3.1-70b-specdec": {
             "vision": False,
             "function_calling": False,
             "json_output": False,
+            "family": "meta-llama3.1"
         },
         "llama-3.1-8b-instant": {
             "vision": False,
             "function_calling": False,
             "json_output": False,
+            "family": "meta-llama3.1"
         },
         "llama-3.2-1b-preview": {
             "vision": False,
             "function_calling": False,
             "json_output": False,
+            "family": "meta-llama3.2"
         },
         "llama-3.2-3b-preview": {
             "vision": False,
             "function_calling": False,
             "json_output": False,
+            "family": "meta-llama3.2"
         },
         "llama-3.2-11b-vision-preview": {
             "vision": False,
             "function_calling": False,
             "json_output": False,
+            "family": "meta-llama3.2"
         },
         "llama-3.2-90b-vision-preview": {
             "vision": False,
             "function_calling": False,
             "json_output": False,
+            "family": "meta-llama3.2"
         },
         "llama-guard-3-8b": {
             "vision": False,
             "function_calling": False,
             "json_output": False,
+            "family": "meta-llama3"
         },
         "llama3-70b-8192": {
             "vision": False,
             "function_calling": False,
             "json_output": False,
+            "family": "meta-llama3"
         },
         "llama3-8b-8192": {
             "vision": False,
             "function_calling": False,
             "json_output": False,
+            "family": "meta-llama3"
         },
         "mixtral-8x7b-32768": {
             "vision": False,
             "function_calling": False,
             "json_output": False,
+            "family": "misitral-mixtral"
         },
     }
 
     _MODEL_TOKEN_LIMITS: Dict[str, int] = {
         "gemmi2-9b-it": 8192,
-        "gemma-7b-it": 8192,
         "llama3-groq-70b-8192-tool-use-preview": 8192,
         "llama3-groq-8b-8192-tool-use-preview": 8192,
         "llama-3.1-70b-versatile": 32768,

@@ -47,9 +47,18 @@ class ExtInfo:
 
 
 class GeminiInfo(ExtInfo):
-    _MODEL_POINTERS = {"gemini-1.5-flash": "gemini-1.5-flash"}
+    _MODEL_POINTERS = {
+        "gemini-2.0-flash-exp": "gemini-2.0-flash-exp",
+        "gemini-1.5-flash": "gemini-1.5-flash",
+    }
 
     _MODEL_CAPABILITIES: Dict[str, ModelInfo] = {
+        "gemini-2.0-flash-exp": {
+            "vision": True,
+            "function_calling": True,
+            "json_output": True,
+            "family": "gemini",
+        },
         "gemini-1.5-flash": {
             "vision": True,
             "function_calling": True,
@@ -65,6 +74,7 @@ class GeminiInfo(ExtInfo):
     }
 
     _MODEL_TOKEN_LIMITS: Dict[str, int] = {
+        "gemini-2.0-flash-exp": 1048576,
         "gemini-1.5-flash": 1048576,
         "gemini-1.5-pro": 2097152,
     }

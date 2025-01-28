@@ -7,6 +7,8 @@ name = "autogen_openaiext_client"
 version = "0.0.3"
 dependencies = [
     "autogen-core>=0.4.0",
+    "autogen-ext[openai]>=0.4.3",
+    "python-dotenv>=1.0.1",
 ]
 requires-python = ">=3.10, <3.13"
 description = "This is an autogen>=0.4 extension for integrating external models through the OpenAI API."

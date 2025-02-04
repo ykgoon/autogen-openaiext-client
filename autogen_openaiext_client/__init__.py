@@ -5,4 +5,4 @@ from autogen_openaiext_client.client import (
 )
 from autogen_openaiext_client.info import GeminiInfo, GroqInfo, TogetherAIInfo
 
-__version__ = "0.0.3"
+__version__ = "0.0.4"
